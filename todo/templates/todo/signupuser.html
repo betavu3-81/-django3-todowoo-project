@@ -1,0 +1,20 @@
+{% extends 'todo/base.html' %}
+{% block content %}
+
+<h1>Регистрация</h1>
+<h3>{{ error }}</h3>
+<form  method="post">
+  {{ form.as_p }}
+  <button type="submit">Зарегистрироватся</button>
+{% csrf_token %}
+
+</form>
+<div class="social">
+  <ul>
+    <li class="google">
+      <button type="submit"><a href="{% url "social:begin" "google-oauth2" %}">Google+</a></button>
+    </li>
+  </ul>
+</div>
+
+{% endblock %}

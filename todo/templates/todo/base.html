@@ -1,0 +1,20 @@
+
+{% if user.is_authenticated %}
+
+Вы вошли как: {{ user.username }}
+<a class="nav-link" href="{% url 'currenttodos' %}">Список задач</a>
+<a class="nav-link" href="{% url 'completedtodos' %}">Выполненые задачи</a>
+<a class="nav-link" href="{% url 'createtodo' %}">Создать задачу</a>
+<a class="nav-link" href="{% url 'home' %}">Главная</a>
+
+<form action="{% url 'logoutuser' %}" method="POST">
+{% csrf_token %}
+<button type="submit">Выйти</button>
+</form>
+{% else %}
+<a href="{% url 'signupuser' %}">Зарегистрироватся</a>
+<a href="{% url 'loginuser' %}">Войти</a>
+{% endif %}
+
+
+{% block content %}{% endblock %}
