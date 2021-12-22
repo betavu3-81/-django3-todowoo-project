@@ -141,8 +141,8 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '1046599765668-5n07glqkhuaq1qtcgb3hejc67phfn89u.apps.googleusercontent.com'
-SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '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'
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = ''
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = ''
 
 LOGIN_URL = '/login'
 #'/auth/login/google-oauth2/'
